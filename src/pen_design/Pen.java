@@ -1,5 +1,7 @@
 package pen_design;
 
+import pen_design.strategies.writestrategies.WriteBehaviour;
+
 public abstract class Pen {
 
     private String name;
@@ -7,11 +9,16 @@ public abstract class Pen {
     private Integer price;
     private PenType penType;
 
-    public Pen(PenType penType) {
+    private WriteBehaviour writeBehaviour;
+
+    public Pen(PenType penType, WriteBehaviour writeBehaviour) {
         this.penType = penType;
+        this.writeBehaviour = writeBehaviour;
     }
 
-    public abstract void write();
+    public void write() {
+        this.writeBehaviour.write();
+    }
 
     public abstract void getColor();
 

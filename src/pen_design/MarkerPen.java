@@ -1,9 +1,11 @@
 package pen_design;
 
+import pen_design.strategies.writestrategies.WriteBehaviour;
+
 public class MarkerPen extends Pen{
 
-    public MarkerPen(PenType penType) {
-        super(PenType.MARKER);
+    public MarkerPen(WriteBehaviour writeBehaviour) {
+        super(PenType.MARKER, writeBehaviour);
     }
 
     @Override

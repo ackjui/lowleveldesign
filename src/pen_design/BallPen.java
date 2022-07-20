@@ -1,9 +1,11 @@
 package pen_design;
 
+import pen_design.strategies.writestrategies.WriteBehaviour;
+
 public class BallPen extends Pen implements RefillPen {
 
-    public BallPen(PenType penType) {
-        super(PenType.BALL);
+    public BallPen(WriteBehaviour writeBehaviour) {
+        super(PenType.BALL, writeBehaviour);
     }
 
     @Override
